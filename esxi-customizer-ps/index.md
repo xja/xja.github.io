@@ -8,8 +8,8 @@ H3C R2900 G3 安装 EXSi 6 时，因为没有集成网卡驱动而不能继续�
 ## 过程
 
 0. 准备
-   1. 如果是 Windows 7 系统，需要安装 [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595)
-   2. 为了脚本能顺利运行，需要解除执行 ps1 脚本限制
+    1. 如果是 Windows 7 系统，需要安装 [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595)
+    2. 为了脚本能顺利运行，需要解除执行 ps1 脚本限制
 
         ```Powershell
         PS C:\Users\Administrator> Set-ExecutionPolicy Unrestricted
@@ -35,9 +35,9 @@ H3C R2900 G3 安装 EXSi 6 时，因为没有集成网卡驱动而不能继续�
     - `-v67`: 指定镜像版本，可选项：`-v50`, `-v51`, `-v55`, `-v60`, `-v65`, `-v67`, `-v70`
     - `-vft`: 连接到 V-Front 在线仓库。如不指定则连接到 VMware ESXi 软件仓库
     - `-pkgDir <dir>[,...]`: 指定驱动的目录
-  
+
 完整帮助使用 `.\ESXi-Customizer-PS.ps1 -help` 查看
-  
+
 等待创建完成后，就可以将镜像写入 U 盘进行安装了。
 
 ## 参考

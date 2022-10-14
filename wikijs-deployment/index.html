@@ -1,4 +1,4 @@
-<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Wiki.js 本地部署 - 我的全新 Hugo 网站</title><meta name=Description content="This is my cool site"><meta property="og:title" content="Wiki.js 本地部署"><meta property="og:description" content="安装 NodeJS 1 2 3 4 5 6 7 root@ubuntu:~# adduser node root@ubuntu:~# su - node node@ubuntu:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash node@ubuntu:~$ nvm install 16.15.1 node@ubuntu:~$ which node /home/node/.nvm/versions/node/v16.15.1/bin/node node@ubuntu:~$ exit 安装 PostgreSQL 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 root@ubuntu:~# apt install postgresql postgresql-contrib root@ubuntu:~# systemctl start postgresql.service root@ubuntu:~# su - postgres postgres@ubuntu:~$ createuser"><meta property="og:type" content="article"><meta property="og:url" content="https://xja.github.io/wikijs-deployment/"><meta property="og:image" content="https://xja.github.io/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-14T22:27:24+08:00"><meta property="article:modified_time" content="2022-10-14T23:07:04+08:00"><meta property="og:site_name" content="我的全新 Hugo 网站"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://xja.github.io/logo.png"><meta name=twitter:title content="Wiki.js 本地部署"><meta name=twitter:description content="安装 NodeJS 1 2 3 4 5 6 7 root@ubuntu:~# adduser node root@ubuntu:~# su - node node@ubuntu:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash node@ubuntu:~$ nvm install 16.15.1 node@ubuntu:~$ which node /home/node/.nvm/versions/node/v16.15.1/bin/node node@ubuntu:~$ exit 安装 PostgreSQL 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 root@ubuntu:~# apt install postgresql postgresql-contrib root@ubuntu:~# systemctl start postgresql.service root@ubuntu:~# su - postgres postgres@ubuntu:~$ createuser"><meta name=application-name content="My cool site"><meta name=apple-mobile-web-app-title content="My cool site"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://xja.github.io/wikijs-deployment/><link rel=prev href=https://xja.github.io/zerotier-waiting-for-system-service/><link rel=next href=https://xja.github.io/esxi-customizer-ps/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Wiki.js 本地部署","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/xja.github.io\/wikijs-deployment\/"},"genre":"posts","keywords":"wiki.js, zhparser","wordcount":861,"url":"https:\/\/xja.github.io\/wikijs-deployment\/","datePublished":"2022-10-14T22:27:24+08:00","dateModified":"2022-10-14T23:07:04+08:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"xja"},"description":""}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="我的全新 Hugo 网站"></a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Wiki.js 本地部署 - 我的全新 Hugo 网站</title><meta name=Description content="This is my cool site"><meta property="og:title" content="Wiki.js 本地部署"><meta property="og:description" content="安装 NodeJS 1 2 3 4 5 6 7 root@ubuntu:~# adduser node root@ubuntu:~# su - node node@ubuntu:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash node@ubuntu:~$ nvm install 16.15.1 node@ubuntu:~$ which node /home/node/.nvm/versions/node/v16.15.1/bin/node node@ubuntu:~$ exit 安装 PostgreSQL 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 root@ubuntu:~# apt install postgresql postgresql-contrib root@ubuntu:~# systemctl start postgresql.service root@ubuntu:~# su - postgres postgres@ubuntu:~$ createuser"><meta property="og:type" content="article"><meta property="og:url" content="https://xja.github.io/wikijs-deployment/"><meta property="og:image" content="https://xja.github.io/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-10-14T22:27:24+08:00"><meta property="article:modified_time" content="2022-10-14T23:16:00+08:00"><meta property="og:site_name" content="我的全新 Hugo 网站"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://xja.github.io/logo.png"><meta name=twitter:title content="Wiki.js 本地部署"><meta name=twitter:description content="安装 NodeJS 1 2 3 4 5 6 7 root@ubuntu:~# adduser node root@ubuntu:~# su - node node@ubuntu:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash node@ubuntu:~$ nvm install 16.15.1 node@ubuntu:~$ which node /home/node/.nvm/versions/node/v16.15.1/bin/node node@ubuntu:~$ exit 安装 PostgreSQL 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 root@ubuntu:~# apt install postgresql postgresql-contrib root@ubuntu:~# systemctl start postgresql.service root@ubuntu:~# su - postgres postgres@ubuntu:~$ createuser"><meta name=application-name content="My cool site"><meta name=apple-mobile-web-app-title content="My cool site"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://xja.github.io/wikijs-deployment/><link rel=prev href=https://xja.github.io/zerotier-waiting-for-system-service/><link rel=next href=https://xja.github.io/esxi-customizer-ps/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Wiki.js 本地部署","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/xja.github.io\/wikijs-deployment\/"},"genre":"posts","keywords":"wiki.js, zhparser","wordcount":861,"url":"https:\/\/xja.github.io\/wikijs-deployment\/","datePublished":"2022-10-14T22:27:24+08:00","dateModified":"2022-10-14T23:16:00+08:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"xja"},"description":""}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="我的全新 Hugo 网站"></a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
 <input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
 <a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw" aria-hidden=true></i></a>
 <a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw" aria-hidden=true></i></a>
@@ -20,14 +20,14 @@
 </span><span class=lnt>5
 </span><span class=lnt>6
 </span><span class=lnt>7
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# adduser node
-</span></span><span class=line><span class=cl>root@ubuntu:~# su - node
-</span></span><span class=line><span class=cl>node@ubuntu:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-</span></span><span class=line><span class=cl>node@ubuntu:~$ nvm install 16.15.1
-</span></span><span class=line><span class=cl>node@ubuntu:~$ which node
-</span></span><span class=line><span class=cl>/home/node/.nvm/versions/node/v16.15.1/bin/node
-</span></span><span class=line><span class=cl>node@ubuntu:~$ exit
-</span></span></code></pre></td></tr></table></div></div><h2 id=安装-postgresql>安装 PostgreSQL</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# adduser node
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# su - node
+</span></span></span><span class=line><span class=cl><span class=go>node@ubuntu:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+</span></span></span><span class=line><span class=cl><span class=go>node@ubuntu:~$ nvm install 16.15.1
+</span></span></span><span class=line><span class=cl><span class=go>node@ubuntu:~$ which node
+</span></span></span><span class=line><span class=cl><span class=go>/home/node/.nvm/versions/node/v16.15.1/bin/node
+</span></span></span><span class=line><span class=cl><span class=go>node@ubuntu:~$ exit
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=安装-postgresql>安装 PostgreSQL</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -46,26 +46,26 @@
 </span><span class=lnt>17
 </span><span class=lnt>18
 </span><span class=lnt>19
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# apt install postgresql postgresql-contrib
-</span></span><span class=line><span class=cl>root@ubuntu:~# systemctl start postgresql.service
-</span></span><span class=line><span class=cl>root@ubuntu:~# su - postgres
-</span></span><span class=line><span class=cl>postgres@ubuntu:~$ createuser --interactive
-</span></span><span class=line><span class=cl>Enter name of role to add: wikijs
-</span></span><span class=line><span class=cl>Shall the new role be a superuser? (y/n) n
-</span></span><span class=line><span class=cl>Shall the new role be allowed to create databases? (y/n) y
-</span></span><span class=line><span class=cl>Shall the new role be allowed to create more new roles? (y/n) n
-</span></span><span class=line><span class=cl>postgres@ubuntu:~$ psql
-</span></span><span class=line><span class=cl>psql (14.3 (Ubuntu 14.3-0ubuntu0.22.04.1))
-</span></span><span class=line><span class=cl>Type &#34;help&#34; for help.
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>postgres=# \password wikijs
-</span></span><span class=line><span class=cl>Enter new password for user &#34;wikijs&#34;:
-</span></span><span class=line><span class=cl>Enter it again:
-</span></span><span class=line><span class=cl>postgres=# CREATE DATABASE wikijs;
-</span></span><span class=line><span class=cl>postgres=# GRANT ALL PRIVILEGES ON DATABASE wikijs TO wikijs;
-</span></span><span class=line><span class=cl>postgres=# \q
-</span></span><span class=line><span class=cl>postgres@ubuntu:~$ exit
-</span></span></code></pre></td></tr></table></div></div><h2 id=安装-wikijs>安装 Wiki.js</h2><h3 id=下载源码>下载源码</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# apt install postgresql postgresql-contrib
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# systemctl start postgresql.service
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# su - postgres
+</span></span></span><span class=line><span class=cl><span class=go>postgres@ubuntu:~$ createuser --interactive
+</span></span></span><span class=line><span class=cl><span class=go>Enter name of role to add: wikijs
+</span></span></span><span class=line><span class=cl><span class=go>Shall the new role be a superuser? (y/n) n
+</span></span></span><span class=line><span class=cl><span class=go>Shall the new role be allowed to create databases? (y/n) y
+</span></span></span><span class=line><span class=cl><span class=go>Shall the new role be allowed to create more new roles? (y/n) n
+</span></span></span><span class=line><span class=cl><span class=go>postgres@ubuntu:~$ psql
+</span></span></span><span class=line><span class=cl><span class=go>psql (14.3 (Ubuntu 14.3-0ubuntu0.22.04.1))
+</span></span></span><span class=line><span class=cl><span class=go>Type &#34;help&#34; for help.
+</span></span></span><span class=line><span class=cl><span class=go></span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=go>postgres=# \password wikijs
+</span></span></span><span class=line><span class=cl><span class=go>Enter new password for user &#34;wikijs&#34;:
+</span></span></span><span class=line><span class=cl><span class=go>Enter it again:
+</span></span></span><span class=line><span class=cl><span class=go>postgres=# CREATE DATABASE wikijs;
+</span></span></span><span class=line><span class=cl><span class=go>postgres=# GRANT ALL PRIVILEGES ON DATABASE wikijs TO wikijs;
+</span></span></span><span class=line><span class=cl><span class=go>postgres=# \q
+</span></span></span><span class=line><span class=cl><span class=go>postgres@ubuntu:~$ exit
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=安装-wikijs>安装 Wiki.js</h2><h3 id=下载源码>下载源码</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -73,19 +73,19 @@
 </span><span class=lnt>6
 </span><span class=lnt>7
 </span><span class=lnt>8
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# adduser wikijs
-</span></span><span class=line><span class=cl>root@ubuntu:~# usermod -aG node wikijs
-</span></span><span class=line><span class=cl>root@ubuntu:~# mkdir -p /var/www/wikijs
-</span></span><span class=line><span class=cl>root@ubuntu:~# chown wikijs:wikijs /var/www/wikijs
-</span></span><span class=line><span class=cl>root@ubuntu:~# su - wikijs
-</span></span><span class=line><span class=cl>wikijs@ubuntu:~$ cd /var/www/wikijs
-</span></span><span class=line><span class=cl>wikijs@ubuntu:/var/www/wikijs$ wget https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
-</span></span><span class=line><span class=cl>wikijs@ubuntu:/var/www/wikijs$ tar xzf wiki-js.tar.gz
-</span></span></code></pre></td></tr></table></div></div><h3 id=配置-wikijs>配置 Wiki.js</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# adduser wikijs
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# usermod -aG node wikijs
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# mkdir -p /var/www/wikijs
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# chown wikijs:wikijs /var/www/wikijs
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# su - wikijs
+</span></span></span><span class=line><span class=cl><span class=go>wikijs@ubuntu:~$ cd /var/www/wikijs
+</span></span></span><span class=line><span class=cl><span class=go>wikijs@ubuntu:/var/www/wikijs$ wget https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
+</span></span></span><span class=line><span class=cl><span class=go>wikijs@ubuntu:/var/www/wikijs$ tar xzf wiki-js.tar.gz
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=配置-wikijs>配置 Wiki.js</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>wikijs@ubuntu:/var/www/wikijs$ cp config.sample.yml config.yml
-</span></span><span class=line><span class=cl>wikijs@ubuntu:/var/www/wikijs$ nano config.yml
-</span></span></code></pre></td></tr></table></div></div><p>根据实际情况修改配置文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>wikijs@ubuntu:/var/www/wikijs$ cp config.sample.yml config.yml
+</span></span></span><span class=line><span class=cl><span class=go>wikijs@ubuntu:/var/www/wikijs$ nano config.yml
+</span></span></span></code></pre></td></tr></table></div></div><p>根据实际情况修改配置文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -106,10 +106,10 @@
 </span></span><span class=line><span class=cl># Log Level
 </span></span><span class=line><span class=cl>logLevel: warn
 </span></span></code></pre></td></tr></table></div></div><p>完成后即可尝试前台启动服务</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>wikijs@ubuntu:/var/www/wikijs$ /home/node/.nvm/versions/node/v16.15.1/bin/node server/
-</span></span></code></pre></td></tr></table></div></div><h2 id=创建后台服务>创建后台服务</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>wikijs@ubuntu:/var/www/wikijs$ nano wikijs.service
-</span></span></code></pre></td></tr></table></div></div><p>粘贴下面内容</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>wikijs@ubuntu:/var/www/wikijs$ /home/node/.nvm/versions/node/v16.15.1/bin/node server/
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=创建后台服务>创建后台服务</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>wikijs@ubuntu:/var/www/wikijs$ nano wikijs.service
+</span></span></span></code></pre></td></tr></table></div></div><p>粘贴下面内容</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -140,10 +140,10 @@
 </span></span><span class=line><span class=cl>[Install]
 </span></span><span class=line><span class=cl>WantedBy=multi-user.target
 </span></span></code></pre></td></tr></table></div></div><p>添加自启并启动</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# systemctl enable --now /var/www/wikijs/wikijs.service
-</span></span></code></pre></td></tr></table></div></div><h2 id=配置-nginx>配置 Nginx</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# nano /var/www/wikijs/nginx.conf
-</span></span></code></pre></td></tr></table></div></div><p>粘贴下列内容</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# systemctl enable --now /var/www/wikijs/wikijs.service
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=配置-nginx>配置 Nginx</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# nano /var/www/wikijs/nginx.conf
+</span></span></span></code></pre></td></tr></table></div></div><p>粘贴下列内容</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -211,9 +211,9 @@
 </span></span><span class=line><span class=cl>}
 </span></span></code></pre></td></tr></table></div></div><p>使用 <code>nginx -t</code> 测试无误后链接到 nginx 配置目录下</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# ln -s /var/www/wikijs/nginx.conf /etc/nginx/sites-enabled/wikijs.conf
-</span></span><span class=line><span class=cl>root@ubuntu:~# nginx -s reload
-</span></span></code></pre></td></tr></table></div></div><p>完成后打开浏览器进行站点配置</p><h2 id=中文分词>中文分词</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# ln -s /var/www/wikijs/nginx.conf /etc/nginx/sites-enabled/wikijs.conf
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# nginx -s reload
+</span></span></span></code></pre></td></tr></table></div></div><p>完成后打开浏览器进行站点配置</p><h2 id=中文分词>中文分词</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -236,32 +236,32 @@
 </span><span class=lnt>21
 </span><span class=lnt>22
 </span><span class=lnt>23
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# apt install --no-install-recommends gcc make libc6-dev bzip2 apt-transport-https ca-certificates
-</span></span><span class=line><span class=cl>root@ubuntu:~# apt install postgresql-server-dev-all
-</span></span><span class=line><span class=cl>root@ubuntu:~# curl -sSkLf http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 | tar xjf - 
-</span></span><span class=line><span class=cl>root@ubuntu:~# curl -sSkLf https://github.com/amutu/zhparser/archive/master.tar.gz | tar xzf -
-</span></span><span class=line><span class=cl>root@ubuntu:~# cd scws-1.2.3 &amp;&amp; ./configure &amp;&amp; make -j$(nproc) install V=0 &amp;&amp; cd ..
-</span></span><span class=line><span class=cl>root@ubuntu:~# cd zhparser-master &amp;&amp; make -j$(nproc) install &amp;&amp; cd ..
-</span></span><span class=line><span class=cl>root@ubuntu:~# apt-get purge -y postgresql-server-dev-all
-</span></span><span class=line><span class=cl>root@ubuntu:~# apt-get autoremove --purge -y
-</span></span><span class=line><span class=cl>root@ubuntu:~# rm -rf zhparser-master scws-1.2.3
-</span></span><span class=line><span class=cl>root@ubuntu:~# su - postgres -c psql
-</span></span><span class=line><span class=cl>postgres=# ALTER USER wikijs WITH SUPERUSER;
-</span></span><span class=line><span class=cl>postgres=# \q
-</span></span><span class=line><span class=cl>root@ubuntu:~# su - wikijs -c psql
-</span></span><span class=line><span class=cl>wikijs=&gt; CREATE EXTENSION pg_trgm;
-</span></span><span class=line><span class=cl>wikijs=&gt; CREATE EXTENSION zhparser;
-</span></span><span class=line><span class=cl>wikijs=&gt; CREATE TEXT SEARCH CONFIGURATION pg_catalog.chinese_zh (PARSER = zhparser);
-</span></span><span class=line><span class=cl>wikijs=&gt; ALTER TEXT SEARCH CONFIGURATION chinese_zh ADD MAPPING FOR n,v,a,i,e,l WITH simple;
-</span></span><span class=line><span class=cl>wikijs=&gt; ALTER ROLE wikijs SET zhparser.punctuation_ignore = ON;
-</span></span><span class=line><span class=cl>wikijs=&gt; ALTER ROLE wikijs SET zhparser.multi_short = ON;
-</span></span><span class=line><span class=cl>wikijs=&gt; \q
-</span></span><span class=line><span class=cl>root@ubuntu:~# su - postgres -c psql
-</span></span><span class=line><span class=cl>postgres=# ALTER USER wikijs WITH NOSUPERUSER;
-</span></span><span class=line><span class=cl>postgres=# \q
-</span></span></code></pre></td></tr></table></div></div><p>编辑 <code>definition.yml</code> 文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# nano /var/www/wikijs/server/modules/search/postgres/definition.yml
-</span></span></code></pre></td></tr></table></div></div><p>在 <code>enum</code> 下添加 <code>- chinese_zh</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# apt install --no-install-recommends gcc make libc6-dev bzip2 apt-transport-https ca-certificates
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# apt install postgresql-server-dev-all
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# curl -sSkLf http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 | tar xjf - 
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# curl -sSkLf https://github.com/amutu/zhparser/archive/master.tar.gz | tar xzf -
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# cd scws-1.2.3 &amp;&amp; ./configure &amp;&amp; make -j$(nproc) install V=0 &amp;&amp; cd ..
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# cd zhparser-master &amp;&amp; make -j$(nproc) install &amp;&amp; cd ..
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# apt-get purge -y postgresql-server-dev-all
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# apt-get autoremove --purge -y
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# rm -rf zhparser-master scws-1.2.3
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# su - postgres -c psql
+</span></span></span><span class=line><span class=cl><span class=go>postgres=# ALTER USER wikijs WITH SUPERUSER;
+</span></span></span><span class=line><span class=cl><span class=go>postgres=# \q
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# su - wikijs -c psql
+</span></span></span><span class=line><span class=cl><span class=go>wikijs=&gt; CREATE EXTENSION pg_trgm;
+</span></span></span><span class=line><span class=cl><span class=go>wikijs=&gt; CREATE EXTENSION zhparser;
+</span></span></span><span class=line><span class=cl><span class=go>wikijs=&gt; CREATE TEXT SEARCH CONFIGURATION pg_catalog.chinese_zh (PARSER = zhparser);
+</span></span></span><span class=line><span class=cl><span class=go>wikijs=&gt; ALTER TEXT SEARCH CONFIGURATION chinese_zh ADD MAPPING FOR n,v,a,i,e,l WITH simple;
+</span></span></span><span class=line><span class=cl><span class=go>wikijs=&gt; ALTER ROLE wikijs SET zhparser.punctuation_ignore = ON;
+</span></span></span><span class=line><span class=cl><span class=go>wikijs=&gt; ALTER ROLE wikijs SET zhparser.multi_short = ON;
+</span></span></span><span class=line><span class=cl><span class=go>wikijs=&gt; \q
+</span></span></span><span class=line><span class=cl><span class=go>root@ubuntu:~# su - postgres -c psql
+</span></span></span><span class=line><span class=cl><span class=go>postgres=# ALTER USER wikijs WITH NOSUPERUSER;
+</span></span></span><span class=line><span class=cl><span class=go>postgres=# \q
+</span></span></span></code></pre></td></tr></table></div></div><p>编辑 <code>definition.yml</code> 文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# nano /var/www/wikijs/server/modules/search/postgres/definition.yml
+</span></span></span></code></pre></td></tr></table></div></div><p>在 <code>enum</code> 下添加 <code>- chinese_zh</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -270,8 +270,8 @@
 </span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>turkish</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>chinese_zh</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div><p>修改 <code>wiki_db</code> 中的表 <code>searchEngines</code>，将 <code>dictLanguage</code> 的值改为 <code>chinese_zh</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>root@ubuntu:~# su - wikijs -c psql
-</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-BashSession data-lang=BashSession><span class=line><span class=cl><span class=go>root@ubuntu:~# su - wikijs -c psql
+</span></span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>UPDATE</span><span class=w> </span><span class=s2>&#34;public&#34;</span><span class=p>.</span><span class=s2>&#34;searchEngines&#34;</span><span class=w> </span><span class=k>SET</span><span class=w> </span><span class=s2>&#34;isEnabled&#34;</span><span class=o>=</span><span class=s1>&#39;true&#39;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;config&#34;</span><span class=o>=</span><span class=s1>&#39;{&#34;dictLanguage&#34;:&#34;chinese_zh&#34;}&#39;</span><span class=w> </span><span class=k>WHERE</span><span class=w>  </span><span class=s2>&#34;key&#34;</span><span class=o>=</span><span class=s1>&#39;postgres&#39;</span><span class=p>;</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div><h2 id=qa>QA</h2><ol><li><p>启动报错</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>error: Package subpath &#39;./public/extractFiles&#39; is not defined by &#34;exports&#34; in /var/www/wikijs/node_modules/extract-files/package.json
