@@ -32,6 +32,14 @@ defaultContentLanguage = "zh-cn"
     hasCJKLanguage = true
     [[languages.zh-cn.menu.main]]
       weight = 1
+      identifier = "home"
+      pre = ""
+      post = ""
+      name = "主页"
+      url = "/"
+      title = ""
+    [[languages.zh-cn.menu.main]]
+      weight = 1
       identifier = "posts"
       pre = ""
       post = ""
@@ -60,6 +68,14 @@ defaultContentLanguage = "zh-cn"
     title = "My New Hugo Site"
     languageCode = "en"
     languageName = "English"
+    [[languages.zh-cn.menu.main]]
+      weight = 1
+      identifier = "home"
+      pre = ""
+      post = ""
+      name = "Home"
+      url = "/"
+      title = ""
     [[languages.en.menu.main]]
       weight = 1
       identifier = "posts"
