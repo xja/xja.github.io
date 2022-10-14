@@ -3,7 +3,7 @@
 
 ## 安装 NodeJS
 
-```BashSession
+```Bash
 root@ubuntu:~# adduser node
 root@ubuntu:~# su - node
 node@ubuntu:~$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -15,7 +15,7 @@ node@ubuntu:~$ exit
 
 ## 安装 PostgreSQL
 
-```BashSession
+```Bash
 root@ubuntu:~# apt install postgresql postgresql-contrib
 root@ubuntu:~# systemctl start postgresql.service
 root@ubuntu:~# su - postgres
@@ -41,7 +41,7 @@ postgres@ubuntu:~$ exit
 
 ### 下载源码
 
-```BashSession
+```Bash
 root@ubuntu:~# adduser wikijs
 root@ubuntu:~# usermod -aG node wikijs
 root@ubuntu:~# mkdir -p /var/www/wikijs
@@ -54,7 +54,7 @@ wikijs@ubuntu:/var/www/wikijs$ tar xzf wiki-js.tar.gz
 
 ### 配置 Wiki.js
 
-```BashSession
+```Bash
 wikijs@ubuntu:/var/www/wikijs$ cp config.sample.yml config.yml
 wikijs@ubuntu:/var/www/wikijs$ nano config.yml
 ```
@@ -76,13 +76,13 @@ logLevel: warn
 
 完成后即可尝试前台启动服务
 
-```BashSession
+```Bash
 wikijs@ubuntu:/var/www/wikijs$ /home/node/.nvm/versions/node/v16.15.1/bin/node server/
 ```
 
 ## 创建后台服务
 
-```BashSession
+```Bash
 wikijs@ubuntu:/var/www/wikijs$ nano wikijs.service
 ```
 
@@ -108,13 +108,13 @@ WantedBy=multi-user.target
 
 添加自启并启动
 
-```BashSession
+```Bash
 root@ubuntu:~# systemctl enable --now /var/www/wikijs/wikijs.service
 ```
 
 ## 配置 Nginx
 
-```BashSession
+```Bash
 root@ubuntu:~# nano /var/www/wikijs/nginx.conf
 ```
 
@@ -158,7 +158,7 @@ server {
 
 使用 `nginx -t` 测试无误后链接到 nginx 配置目录下
 
-```BashSession
+```Bash
 root@ubuntu:~# ln -s /var/www/wikijs/nginx.conf /etc/nginx/sites-enabled/wikijs.conf
 root@ubuntu:~# nginx -s reload
 ```
@@ -167,7 +167,7 @@ root@ubuntu:~# nginx -s reload
 
 ## 中文分词
 
-```BashSession
+```Bash
 root@ubuntu:~# apt install --no-install-recommends gcc make libc6-dev bzip2 apt-transport-https ca-certificates
 root@ubuntu:~# apt install postgresql-server-dev-all
 root@ubuntu:~# curl -sSkLf http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 | tar xjf - 
@@ -195,7 +195,7 @@ postgres=# \q
 
 编辑 `definition.yml` 文件
 
-```BashSession
+```Bash
 root@ubuntu:~# nano /var/www/wikijs/server/modules/search/postgres/definition.yml
 ```
 
@@ -210,7 +210,7 @@ enum:
 
 修改 `wiki_db` 中的表 `searchEngines`，将 `dictLanguage` 的值改为 `chinese_zh`
 
-```BashSession
+```Bash
 root@ubuntu:~# su - wikijs -c psql
 ```
 

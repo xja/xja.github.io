@@ -19,7 +19,7 @@
 3. 修改 GRUB 文件
     1. 使用编辑器打开 grub 文件
 
-        ```BashSession
+        ```Bash
         root@debian:~# nano /etc/default/grub
         ```
 
@@ -39,7 +39,7 @@
 
     4. 返回到控制台界面后执行下列命令使修改生效
 
-        ```BashSession
+        ```Bash
         root@debian:~# export PATH=$PATH:/usr/sbin
         root@debian:~# update-grub
         ```
