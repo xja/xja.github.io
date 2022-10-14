@@ -24,7 +24,7 @@ tags: ["debian", "grub", "h3c"]
 3. 修改 GRUB 文件
     1. 使用编辑器打开 grub 文件
 
-        ```ShellSession
+        ```BashSession
         root@debian:~# nano /etc/default/grub
         ```
 
@@ -44,7 +44,7 @@ tags: ["debian", "grub", "h3c"]
 
     4. 返回到控制台界面后执行下列命令使修改生效
 
-        ```ShellSession
+        ```BashSession
         root@debian:~# export PATH=$PATH:/usr/sbin
         root@debian:~# update-grub
         ```
