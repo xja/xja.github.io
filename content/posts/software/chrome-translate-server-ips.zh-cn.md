@@ -2,6 +2,8 @@
 title: "谷歌浏览器 Chrome 翻译服务器 IP 地址收集"
 date: 2022-10-26T22:41:38+08:00
 draft: false
+category: ["software"]
+tags: ["chrome", "hosts"]
 ---
 
 #### 说明
