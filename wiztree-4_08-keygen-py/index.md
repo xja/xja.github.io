@@ -9,7 +9,7 @@
 2. 激活码**仅移除捐赠按钮和捐赠消息**，具体区别见官方说明
 3. 此代码和原 exe 均有可能会生成过期无效的激活码，生成 100% 有效的激活码不在本文的研究范围
 4. 使用激活码需要断网或阻止应用程序联网，否则会激活失败
-5. 使用 [Python在线运行工具](http://dh.ci/wiztreekeygen)([原链接](https://www.online-python.com/Sfd0laEQCD)) 可以直接在线生成激活码，无需 Python 环境
+5. 使用 [Python在线运行工具](https://www.online-python.com/Sfd0laEQCD) 可以直接在线生成激活码，无需 Python 环境
 
 ## Python 代码
 
