@@ -68,7 +68,7 @@ defaultContentLanguage = "zh-cn"
     title = "My New Hugo Site"
     languageCode = "en"
     languageName = "English"
-    [[languages.zh-cn.menu.main]]
+    [[languages.en.menu.main]]
       weight = 1
       identifier = "home"
       pre = ""
