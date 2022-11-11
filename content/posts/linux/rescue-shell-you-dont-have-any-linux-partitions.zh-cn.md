@@ -54,7 +54,7 @@ CentOS Stream release 8
 bash-4.4# 
 ```
 
-如果需要在 chroot 后访问 `/dev`，如使用 grub2-install 重建 GRUB 2，可以使用 bind mount。在 chroot 之前，运行如下命令
+如果需要在 chroot 后访问 `/dev`，如使用 `grub2-install` 重建 GRUB 2，可以使用 bind mount。在 chroot 之前，运行如下命令
 
 ```Shell
 mount --bind /dev /mnt/sysimage/dev
