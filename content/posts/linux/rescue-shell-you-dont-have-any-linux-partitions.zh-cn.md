@@ -1,12 +1,12 @@
 ---
-title: "Rescue You Dont Have Any Linux Partitions"
+title: "Rescue Shell - You Don't Have Any Linux Partitions"
 date: 2022-11-11T17:47:05+08:00
 draft: false
 categories: ["linux"]
 tags: ["rescue", "mount", "chroot"]
 ---
 
-Nothing went wrong with this installation, I found this issue when I was testing rescue system.
+系统本身是正常的，在测试 rescue 环境的时候发现系统分区不能自动挂载
 
 ```BashSession
 Rescue Shell
@@ -54,6 +54,13 @@ CentOS Stream release 8
 bash-4.4# 
 ```
 
+如果需要在 chroot 后访问 `/dev`，如使用 grub2-install 重建 GRUB 2，可以使用 bind mount。在 chroot 之前，运行如下命令
+
+```Shell
+mount --bind /dev /mnt/sysimage/dev
+```
+
 ## Reference
 
 1. [14.04 - mount unknown filesystem type 'lvm2_member' - Ask Ubuntu](https://askubuntu.com/a/1078061)
+2. [/dev is empty after I chroot to /mnt/sysimage in rescue mode - narkive.com](https://narkive.com/0yw58zIA.2)
