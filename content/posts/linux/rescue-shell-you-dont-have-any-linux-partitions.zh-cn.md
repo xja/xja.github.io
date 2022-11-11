@@ -54,13 +54,6 @@ CentOS Stream release 8
 bash-4.4# 
 ```
 
-如果需要在 chroot 后访问 `/dev`，如使用 `grub2-install` 重建 GRUB 2，可以使用 bind mount。在 chroot 之前，运行如下命令
-
-```Shell
-mount --bind /dev /mnt/sysimage/dev
-```
-
 ## Reference
 
 1. [14.04 - mount unknown filesystem type 'lvm2_member' - Ask Ubuntu](https://askubuntu.com/a/1078061)
-2. [/dev is empty after I chroot to /mnt/sysimage in rescue mode - narkive.com](https://narkive.com/0yw58zIA.2)
