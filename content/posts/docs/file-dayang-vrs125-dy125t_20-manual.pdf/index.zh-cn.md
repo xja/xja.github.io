@@ -1,7 +1,9 @@
 ---
 title: "文件: 大阳 VRS125 DY125T-20 使用说明书.pdf"
 date: 2023-01-12T16:08:46+08:00
-draft: true
+draft: false
+categories: ["pdf"]
+tags: ["motorcycle", "pdf", "manual", "dayang", "vrs125"]
 ---
 
 文件名称：`Dayang-VRS125-DY125T_20-Manual.pdf`
