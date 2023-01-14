@@ -4,7 +4,7 @@ date: 2023-01-12T16:08:46+08:00
 draft: true
 ---
 
-文件名称：`大阳 VRS125 DY125T-20 使用说明书.pdf`
+文件名称：`Dayang-VRS125-DY125T_20-Manual.pdf`
 
 文件大小：32.3 MB (33,910,962 B)
 
